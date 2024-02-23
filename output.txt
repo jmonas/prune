@@ -1,0 +1,47 @@
+Loading cifar10 dataset.
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Creating lottery-vgg16 model.
+Pre-Train for 0 epochs.
+Pruning with synflow for 1 epochs.
+Post-Training for 0 epochs.
+Train results:
+               train_loss  test_loss  top1_accuracy  top5_accuracy
+Init.      0         NaN   2.417717          11.73          50.17
+Pre-Prune  0         NaN   2.417717          11.73          50.17
+Post-Prune 0         NaN   2.329114           9.98          51.17
+Final      0         NaN   2.329114           9.98          51.17
+Prune results:
+             module   param  sparsity     size             shape     flops    score mean  score variance     score sum  score abs mean  score abs variance  score abs sum  prunable
+0    layers.0.conv  weight  0.997685     1728     (64, 3, 3, 3)   1769472  1.704298e+19             inf  2.945027e+22    1.704298e+19                 inf   2.945027e+22      True
+1    layers.0.conv    bias  1.000000       64             (64,)     65536  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+2    layers.1.conv  weight  0.983805    36864    (64, 64, 3, 3)  37748736  7.988896e+17             inf  2.945027e+22    7.988896e+17                 inf   2.945027e+22      True
+3    layers.1.conv    bias  1.000000       64             (64,)     65536  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+4    layers.3.conv  weight  0.969618    73728   (128, 64, 3, 3)  18874368  3.994448e+17             inf  2.945027e+22    3.994448e+17                 inf   2.945027e+22      True
+5    layers.3.conv    bias  1.000000      128            (128,)     32768  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+6    layers.4.conv  weight  0.940477   147456  (128, 128, 3, 3)  37748736  1.997224e+17             inf  2.945027e+22    1.997224e+17                 inf   2.945027e+22      True
+7    layers.4.conv    bias  1.000000      128            (128,)     32768  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+8    layers.6.conv  weight  0.881911   294912  (256, 128, 3, 3)  18874368  9.986122e+16             inf  2.945027e+22    9.986122e+16                 inf   2.945027e+22      True
+9    layers.6.conv    bias  1.000000      256            (256,)     16384  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+10   layers.7.conv  weight  0.766754   589824  (256, 256, 3, 3)  37748736  4.993060e+16             inf  2.945027e+22    4.993060e+16                 inf   2.945027e+22      True
+11   layers.7.conv    bias  1.000000      256            (256,)     16384  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+12   layers.8.conv  weight  0.766447   589824  (256, 256, 3, 3)  37748736  4.993061e+16             inf  2.945027e+22    4.993061e+16                 inf   2.945027e+22      True
+13   layers.8.conv    bias  1.000000      256            (256,)     16384  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+14  layers.10.conv  weight  0.546590  1179648  (512, 256, 3, 3)  18874368  2.496530e+16             inf  2.945027e+22    2.496530e+16                 inf   2.945027e+22      True
+15  layers.10.conv    bias  1.000000      512            (512,)      8192  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+16  layers.11.conv  weight  0.232446  2359296  (512, 512, 3, 3)  37748736  1.248265e+16    9.402646e+31  2.945026e+22    1.248265e+16        9.402646e+31   2.945026e+22      True
+17  layers.11.conv    bias  1.000000      512            (512,)      8192  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+18  layers.12.conv  weight  0.232695  2359296  (512, 512, 3, 3)  37748736  1.248265e+16    9.415210e+31  2.945027e+22    1.248265e+16        9.415210e+31   2.945027e+22      True
+19  layers.12.conv    bias  1.000000      512            (512,)      8192  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+20  layers.14.conv  weight  0.211462  2359296  (512, 512, 3, 3)   9437184  1.248265e+16             inf  2.945026e+22    1.248265e+16                 inf   2.945026e+22      True
+21  layers.14.conv    bias  1.000000      512            (512,)      2048  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+22  layers.15.conv  weight  0.211558  2359296  (512, 512, 3, 3)   9437184  1.248265e+16             inf  2.945026e+22    1.248265e+16                 inf   2.945026e+22      True
+23  layers.15.conv    bias  1.000000      512            (512,)      2048  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+24  layers.16.conv  weight  0.210058  2359296  (512, 512, 3, 3)   9437184  1.248265e+16             inf  2.945027e+22    1.248265e+16                 inf   2.945027e+22      True
+25  layers.16.conv    bias  1.000000      512            (512,)      2048  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+26              fc  weight  0.997656     5120         (10, 512)      5120  5.752005e+18             inf  2.945027e+22    5.752005e+18                 inf   2.945027e+22      True
+27              fc    bias  1.000000       10             (10,)        10  0.000000e+00    0.000000e+00  0.000000e+00    0.000000e+00        0.000000e+00   0.000000e+00     False
+Parameter Sparsity: 4657710/14719818 (0.3164)
+FLOP Sparsity: 201358547/313478154 (0.6423)
+Saving results.
