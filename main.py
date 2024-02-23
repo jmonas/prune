@@ -35,9 +35,9 @@ if __name__ == '__main__':
 						help='input batch size for training (default: 64)')
 	training_args.add_argument('--test-batch-size', type=int, default=256,
 						help='input batch size for testing (default: 256)')
-	training_args.add_argument('--pre-epochs', type=int, default=10,
+	training_args.add_argument('--pre-epochs', type=int, default=0,
 						help='number of epochs to train before pruning (default: 0)')
-	training_args.add_argument('--post-epochs', type=int, default=10,
+	training_args.add_argument('--post-epochs', type=int, default=100,
 						help='number of epochs to train after pruning (default: 10)')
 	training_args.add_argument('--lr', type=float, default=0.001,
 						help='learning rate (default: 0.001)')
