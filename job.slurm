@@ -12,6 +12,6 @@
 
 module purge
 module load anaconda3/2023.9
-conda activate torch_env
+conda activate kaj
 
 python main.py --model-class {model_class} --model {model} --dataset {dataset} --experiment singleshot --pruner {pruner} --compression {compression} --expid {job_name}
