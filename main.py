@@ -132,6 +132,8 @@ if __name__ == '__main__':
 
     ## Run Experiment ##
     if args.experiment == 'singleshot':
+        print("yo")
+        print(args)
         singleshot.run(args)
     if args.experiment == 'multishot':
         multishot.run(args)
