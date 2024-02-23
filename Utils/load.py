@@ -41,7 +41,7 @@ def get_transform(size, padding, mean, std, preprocess):
 def dataloader(dataset, batch_size, train, workers, length=None):
     # Dataset
     if dataset == 'mnist':
-        data_dir = 'MNIST_Data' 
+        data_dir = 'Data/MNIST' 
         mean, std = (0.1307,), (0.3081,)
         transform = get_transform(size=28, padding=0, mean=mean, std=std, preprocess=False)
         dataset = datasets.MNIST(data_dir, train=train, download=False, transform=transform)
