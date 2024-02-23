@@ -10,7 +10,7 @@
 #SBATCH --mail-type=fail         # send email if job fails
 #SBATCH --mail-user=jmonas@princeton.edu
 
-
+module purge
 module load anaconda3/2023.9
 conda activate torch_env
 
