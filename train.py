@@ -2,6 +2,7 @@ import torch
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
+import timeit
 
 def train(model, loss, optimizer, dataloader, device, epoch, verbose, log_interval=10):
     model.train()
@@ -47,7 +48,12 @@ def train_eval_loop(model, loss, optimizer, scheduler, train_loader, test_loader
     rows = [[np.nan, test_loss, accuracy1, accuracy5]]
     for epoch in tqdm(range(epochs)):
         train_loss = train(model, loss, optimizer, train_loader, device, epoch, verbose)
+
+        start = timeit.default_timer()
         test_loss, accuracy1, accuracy5 = eval(model, loss, test_loader, device, verbose)
+        stop = timeit.default_timer()
+        print('Test Time: ', stop - start)
+
         row = [train_loss, test_loss, accuracy1, accuracy5]
         scheduler.step()
         rows.append(row)
