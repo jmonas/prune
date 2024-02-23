@@ -41,13 +41,15 @@ def get_transform(size, padding, mean, std, preprocess):
 def dataloader(dataset, batch_size, train, workers, length=None):
     # Dataset
     if dataset == 'mnist':
+        data_dir = 'MNIST_Data' 
         mean, std = (0.1307,), (0.3081,)
         transform = get_transform(size=28, padding=0, mean=mean, std=std, preprocess=False)
-        dataset = datasets.MNIST('Data', train=train, download=True, transform=transform)
+        dataset = datasets.MNIST(data_dir, train=train, download=False, transform=transform)
     if dataset == 'cifar10':
+        data_dir = '/scratch/gpfs/DATASETS/cifar'
         mean, std = (0.491, 0.482, 0.447), (0.247, 0.243, 0.262)
         transform = get_transform(size=32, padding=4, mean=mean, std=std, preprocess=train)
-        dataset = datasets.CIFAR10('Data', train=train, download=True, transform=transform) 
+        dataset = datasets.CIFAR10(data_dir, train=train, download=False, transform=transform) 
     if dataset == 'cifar100':
         mean, std = (0.507, 0.487, 0.441), (0.267, 0.256, 0.276)
         transform = get_transform(size=32, padding=4, mean=mean, std=std, preprocess=train)
