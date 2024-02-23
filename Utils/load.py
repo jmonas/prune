@@ -46,7 +46,7 @@ def dataloader(dataset, batch_size, train, workers, length=None):
         transform = get_transform(size=28, padding=0, mean=mean, std=std, preprocess=False)
         dataset = datasets.MNIST(data_dir, train=train, download=False, transform=transform)
     if dataset == 'cifar10':
-        data_dir = '../../../scratch/network'
+        data_dir = '../../../scratch/network/jmonas'
         mean, std = (0.491, 0.482, 0.447), (0.247, 0.243, 0.262)
         transform = get_transform(size=32, padding=4, mean=mean, std=std, preprocess=train)
         dataset = datasets.CIFAR10(data_dir, train=train, download=True, transform=transform) 
