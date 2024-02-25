@@ -3,9 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+# mag_d5_vgg16_cifar10
+# snip_d5_vgg16_cifar10
+# snyflow_d5_vgg16_cifar10
+# grasp_d5_vgg16_cifar10
+
 # Load the model state dictionary from .pt file
-model_path = '/home/jmonas/prune/Results/data/singleshot/rand_d5_vgg16_cifar10/model.pt'  # Replace with the path to your .pt file
-save_path = '/home/jmonas/prune/hists/hist_rand_d5_vgg16_cifar10.png'
+model_path = '/home/jmonas/prune/Results/data/singleshot/mag_d5_vgg16_cifar10/model.pt'  # Replace with the path to your .pt file
+save_path = '/home/jmonas/prune/hists/hist_mag_d5_vgg16_cifar10.png'
 model_state_dict = torch.load(model_path, map_location=torch.device('cpu'))
 
 # Prepare the figure and 3D axes
