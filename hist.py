@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Load the model state dictionary from .pt file
-model_path = '/Users/owner/Desktop/cos598d_pruning/Results/data/singleshot/0/model.pt'  # Replace with the path to your .pt file
+model_path = '/home/jmonas/prune/Results/data/singleshot/rand_d5_vgg16_cifar10/model.pt'  # Replace with the path to your .pt file
+save_path = '/home/jmonas/prune/hists/hist_rand_d5_vgg16_cifar10.png'
 model_state_dict = torch.load(model_path, map_location=torch.device('cpu'))
 
 # Prepare the figure and 3D axes
@@ -45,4 +46,4 @@ ax.set_zlabel('Counts')
 # ax.view_init(elev=30, azim=45)
 
 # Show the plot
-plt.show()
+plt.savefig(save_path)
